@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Price Prediction</title>
+</head>
+<body>
+
+    <h1>Propery Price Prediction</h1>
+
+    <form method="post" action="/predict">
+        <label>bedrooms</label><br>
+        <input type="text" name="bedrooms"><br><br>
+
+        <label>bathrooms</label><br>
+        <input type="text" name="bathrooms"><br><br>
+
+        <label>sqft_living</label><br>
+        <input type="text" name="sqft_living"><br><br>
+
+         <label>sqft_lot</label><br>
+        <input type="text" name="sqft_lot"><br><br>
+
+         <label>floors</label><br>
+        <input type="text" name="floors"><br><br>
+
+        <label>condition</label><br>
+        <input type="text" name="condition"><br><br>
+
+        <label>sqft_above</label><br>
+        <input type="text" name="sqft_above"><br><br>
+
+        <label>sqft_basement</label><br>
+        <input type="text" name="sqft_basement"><br><br>
+
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+    <div id="prediction"></div>
+
+    <script>
+
+        var predictedPrice = "{{ pred }}";
+
+        document.getElementById("prediction").textContent = predictedPrice;
+    </script>
+
+</body>
+</html>
